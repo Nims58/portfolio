@@ -1,18 +1,52 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import { Link } from 'react-scroll';
+import { motion, AnimatePresence } from "framer-motion";
+
+const textVariants = {
+  enter: { opacity: 0, rotate: -90, scale: 0.8 },
+  center: { opacity: 1, rotate: 0, scale: 1 },
+  exit: { opacity: 0, rotate: 90, scale: 0.8 },
+};
+
+const animationSettings = {
+  duration: 0.8,
+  ease: "easeInOut",
+};
+
 
 const Home = () => {
+
+  const texts = [" Geomatics Engineer", " Geospatial Application Developer"];
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
+    }, 4000); 
+    return () => clearInterval(interval);
+  }, [texts.length]);
+
   return (
     <div name='home' className='w-full h-screen bg-[#0a192f]'>
       {/* Container */}
       <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
-        <p className='text-pink-600'>Hi, my name is</p>
+        <p className='text-white'>Hi, my name is</p>
         <h1 className='text-4xl sm:text-7xl font-bold text-[#ccd6f6]'>
-          NIMESH BHANDARI
+            NIMESH BHANDARI
         </h1>
-        <h2 className='text-4xl sm:text-7xl font-bold text-[#8892b0]'>
-          I'm an Undergrad Student.
+        <h2 className="text-4xl sm:text-5xl font-bold text-[#8892b0]">
+          I'm a
+          <motion.span
+            key={texts[currentTextIndex]} // Unique key for smooth transitions
+            initial="enter"
+            animate="center"
+            exit="exit"
+            variants={textVariants}
+            transition={animationSettings}
+          >
+            {texts[currentTextIndex]}
+          </motion.span>
         </h2>
         <p className='text-[#8892b0] py-4 max-w-[700px]'>
           I'm an Senior at Department of Geomatics Engineering,
