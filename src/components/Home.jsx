@@ -23,7 +23,7 @@ const Home = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
-    }, 4000); 
+    }, 3000);
     return () => clearInterval(interval);
   }, [texts.length]);
 
@@ -33,7 +33,7 @@ const Home = () => {
       <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
         <p className='text-white'>Hi, my name is</p>
         <h1 className='text-4xl sm:text-7xl font-bold text-[#ccd6f6]'>
-            NIMESH BHANDARI
+          NIMESH BHANDARI
         </h1>
         <h2 className="text-4xl sm:text-5xl font-bold text-[#8892b0]">
           I'm a
@@ -49,9 +49,10 @@ const Home = () => {
           </motion.span>
         </h2>
         <p className='text-[#8892b0] py-4 max-w-[700px]'>
-          I'm an Senior at Department of Geomatics Engineering,
-          Kathmandu University. I specialize in the field of Control Surveying and have been developing expertise in this area. I'm also a freelancer speciaizing in Graphics Designing
-          and WebGIS Development.
+          I'm a Geomatics Engineer with experience in geospatial application development, spatial analysis, and
+          mapping. I specialize in geospatial data processing and web-based mapping platforms. Passionate about
+          continuous learning and growth, I am committed to expanding my expertise in cutting-edge geospatial
+          technologies and contributing to impactful projects.
         </p>
         <div>
           <Link to='work' smooth={true} duration={500}>
