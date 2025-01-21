@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.e602ed8c.css",
-    "main.js": "/static/js/main.133b7754.js",
+    "main.js": "/static/js/main.35a7a47b.js",
     "static/media/SuitabilityAReport.pdf": "/static/media/SuitabilityAReport.410d61d9b98f2a0854ac.pdf",
     "static/media/5.Triangulation (Autosaved).pdf": "/static/media/5.Triangulation (Autosaved).e4556ce0515e8d795b0c.pdf",
     "static/media/RS_LULCAssignment_Pokhara_Final.pdf": "/static/media/RS_LULCAssignment_Pokhara_Final.56b6cb1017e30faa638d.pdf",
@@ -37,10 +37,10 @@
     "static/media/python.png": "/static/media/python.8ee0c5caa8a75fd52507.png",
     "index.html": "/index.html",
     "main.e602ed8c.css.map": "/static/css/main.e602ed8c.css.map",
-    "main.133b7754.js.map": "/static/js/main.133b7754.js.map"
+    "main.35a7a47b.js.map": "/static/js/main.35a7a47b.js.map"
   },
   "entrypoints": [
     "static/css/main.e602ed8c.css",
-    "static/js/main.133b7754.js"
+    "static/js/main.35a7a47b.js"
   ]
 }
